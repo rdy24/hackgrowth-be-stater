@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "firstName": "Super",
+      "lastName": "Admin",
+      "email": "superadmin@mail.com",
+      "password": "password123",
+      "roleKey": "super-admin"
+    },
+    {
+      "firstName": "Manager",
+      "lastName": "User",
+      "email": "manager@mail.com",
+      "password": "password123",
+      "roleKey": "manager"
+    },
+    {
+      "firstName": "Mentor",
+      "lastName": "User",
+      "email": "mentor@mail.com",
+      "password": "password123",
+      "roleKey": "mentor"
+    },
+    {
+      "firstName": "Student",
+      "lastName": "User",
+      "email": "student@mail.com",
+      "password": "password123",
+      "roleKey": "student"
+    }
+  ]
+}

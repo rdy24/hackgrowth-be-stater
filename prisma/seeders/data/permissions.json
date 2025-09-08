@@ -1,0 +1,69 @@
+{
+    "data": [
+        {
+            "name": "View Courses",
+            "key": "course.view",
+            "resource": "course"
+        },
+        {
+            "name": "Create Course",
+            "key": "course.create",
+            "resource": "course"
+        },
+        {
+            "name": "Update Course",
+            "key": "course.update",
+            "resource": "course"
+        },
+        {
+            "name": "Delete Course",
+            "key": "course.delete",
+            "resource": "course"
+        },
+        {
+            "name": "Manage Users",
+            "key": "user.manage",
+            "resource": "user"
+        },
+        {
+            "name": "View Transactions",
+            "key": "transaction.view",
+            "resource": "transaction"
+        },
+        {
+            "name": "Manage Transactions",
+            "key": "transaction.manage",
+            "resource": "transaction"
+        },
+        {
+            "name": "View Students",
+            "key": "student.view",
+            "resource": "student"
+        },
+        {
+            "name": "Manage Students",
+            "key": "student.manage",
+            "resource": "student"
+        },
+        {
+            "name": "View Mentors",
+            "key": "mentor.view",
+            "resource": "mentor"
+        },
+        {
+            "name": "Manage Mentors",
+            "key": "mentor.manage",
+            "resource": "mentor"
+        },
+        {
+            "name": "View Reports",
+            "key": "report.view",
+            "resource": "report"
+        },
+        {
+            "name": "Manage System",
+            "key": "system.manage",
+            "resource": "system"
+        }
+    ]
+}

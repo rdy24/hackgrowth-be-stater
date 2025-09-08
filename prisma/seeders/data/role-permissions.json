@@ -1,0 +1,42 @@
+{
+    "data": {
+        "super-admin": [
+            "course.view",
+            "course.create",
+            "course.update",
+            "course.delete",
+            "user.manage",
+            "transaction.view",
+            "transaction.manage",
+            "student.view",
+            "student.manage",
+            "mentor.view",
+            "mentor.manage",
+            "report.view",
+            "system.manage"
+        ],
+        "manager": [
+            "course.view",
+            "course.create",
+            "course.update",
+            "user.manage",
+            "transaction.view",
+            "transaction.manage",
+            "student.view",
+            "student.manage",
+            "mentor.view",
+            "mentor.manage",
+            "report.view"
+        ],
+        "mentor": [
+            "course.view",
+            "course.create",
+            "course.update",
+            "student.view",
+            "transaction.view"
+        ],
+        "student": [
+            "course.view"
+        ]
+    }
+}

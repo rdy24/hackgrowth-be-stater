@@ -3,7 +3,6 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ZodValidationPipe } from './common/pipes/zod.validation.pipe';
 import { ResponseTransformInterceptor } from './common/interceptors/response.interceptor';
-import { TimezoneInterceptor } from './common/interceptors/timezone.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -12,10 +11,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.useGlobalPipes(new ZodValidationPipe());
-  app.useGlobalInterceptors(
-    new TimezoneInterceptor(),
-    new ResponseTransformInterceptor(),
-  );
+  app.useGlobalInterceptors(new ResponseTransformInterceptor());
 
   const port = process.env.PORT || 3000;
   await app.listen(port);

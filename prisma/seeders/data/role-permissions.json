@@ -1,42 +1,70 @@
 {
-    "data": {
-        "super-admin": [
-            "course.view",
-            "course.create",
-            "course.update",
-            "course.delete",
-            "user.manage",
-            "transaction.view",
-            "transaction.manage",
-            "student.view",
-            "student.manage",
-            "mentor.view",
-            "mentor.manage",
-            "report.view",
-            "system.manage"
-        ],
-        "manager": [
-            "course.view",
-            "course.create",
-            "course.update",
-            "user.manage",
-            "transaction.view",
-            "transaction.manage",
-            "student.view",
-            "student.manage",
-            "mentor.view",
-            "mentor.manage",
-            "report.view"
-        ],
-        "mentor": [
-            "course.view",
-            "course.create",
-            "course.update",
-            "student.view",
-            "transaction.view"
-        ],
-        "student": [
-            "course.view"
-        ]
-    }
+  "data": {
+    "manager": [
+      "courses.read",
+      "courses.create",
+      "courses.update",
+      "courses.delete",
+      "transactions.create",
+      "transactions.read",
+      "transactions.update",
+      "transactions.delete",
+      "students.read",
+      "mentors.read",
+      "dashboard.read",
+      "roles.read",
+      "roles.create",
+      "roles.update",
+      "roles.delete",
+      "permissions.read",
+      "permissions.create",
+      "permissions.update",
+      "permissions.delete",
+      "topics.read",
+      "topics.create",
+      "topics.update",
+      "topics.delete",
+      "subjects.read",
+      "subjects.create",
+      "subjects.update",
+      "subjects.delete",
+      "sections.read",
+      "sections.create",
+      "sections.update",
+      "sections.delete",
+      "lessons.read",
+      "lessons.create",
+      "lessons.update",
+      "lessons.delete",
+      "withdrawals.read",
+      "withdrawals.update",
+      "withdrawals.delete",
+      "withdrawals.create"
+    ],
+    "mentor": [
+      "courses.read",
+      "courses.create",
+      "courses.update",
+      "students.read",
+      "transactions.read",
+      "dashboard.read",
+      "topics.read",
+      "subjects.read",
+      "sections.read",
+      "sections.create",
+      "sections.update",
+      "lessons.read",
+      "lessons.create",
+      "lessons.update",
+      "withdrawals.read",
+      "withdrawals.create"
+    ],
+    "student": [
+      "courses.read",
+      "topics.read",
+      "subjects.read",
+      "sections.read",
+      "lessons.read"
+    ]
+  }
 }

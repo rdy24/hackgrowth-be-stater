@@ -9,6 +9,12 @@ services:
       POSTGRES_DB: hackgrowth_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres123
+      TZ: Asia/Jakarta
+      PGTZ: Asia/Jakarta
+    command: >
+      postgres
+      -c timezone='Asia/Jakarta'
+      -c log_timezone='Asia/Jakarta'
     ports:
       - '35432:5432'
     volumes:

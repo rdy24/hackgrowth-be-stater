@@ -1,20 +1,16 @@
 {
-    "data": [
-        {
-            "name": "Student",
-            "key": "student"
-        },
-        {
-            "name": "Mentor",
-            "key": "mentor"
-        },
-        {
-            "name": "Manager",
-            "key": "manager"
-        },
-        {
-            "name": "Super Admin",
-            "key": "super-admin"
-        }
-    ]
+  "data": [
+    {
+      "name": "Student",
+      "key": "student"
+    },
+    {
+      "name": "Mentor",
+      "key": "mentor"
+    },
+    {
+      "name": "Manager",
+      "key": "manager"
+    }
+  ]
 }

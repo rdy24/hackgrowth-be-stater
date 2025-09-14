@@ -20,9 +20,6 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "seed": "npx prisma db seed"
   },
-  "prisma": {
-    "seed": "npx ts-node prisma/seeders/seed.ts"
-  },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
@@ -30,6 +27,8 @@
     "@nestjs/platform-express": "^11.0.1",
     "@prisma/client": "^6.15.0",
     "bcrypt": "^6.0.0",
+    "date-fns-tz": "^3.2.0",
+    "dotenv": "^17.2.2",
     "prisma": "^6.15.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",

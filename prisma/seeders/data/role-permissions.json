@@ -2,9 +2,6 @@
   "data": {
     "manager": [
       "courses.read",
-      "courses.create",
-      "courses.update",
-      "courses.delete",
       "transactions.create",
       "transactions.read",
       "transactions.update",
@@ -56,6 +53,7 @@
       "lessons.read",
       "lessons.create",
       "lessons.update",
+      "lessons.delete",
       "withdrawals.read",
       "withdrawals.create"
     ],
@@ -64,7 +62,9 @@
       "topics.read",
       "subjects.read",
       "sections.read",
-      "lessons.read"
+      "lessons.read",
+      "transactions.read",
+      "transactions.create"
     ]
   }
 }

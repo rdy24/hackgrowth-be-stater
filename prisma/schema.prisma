@@ -59,8 +59,32 @@ model User {
   updatedAt         DateTime  @updatedAt @map("updated_at") @db.Timestamptz
 
   role               Role               @relation(fields: [roleId], references: [id])
+  userProfile        UserProfile?
 
   @@index([email])
   @@index([roleId])
   @@map("users")
+}
+
+model UserProfile {
+  id              Int      @id @default(autoincrement())
+  userId          Int      @unique @map("user_id")
+  bio             String?
+  avatar          String?  @db.VarChar(500)
+  gender          Gender?
+  expertise       String?
+  experienceYears Int?     @map("experience_years")
+  linkedinUrl     String?  @map("linkedin_url") @db.VarChar(255)
+  githubUrl       String?  @map("github_url") @db.VarChar(255)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_profiles")
+}
+
+enum Gender {
+  MALE
+  FEMALE
 }

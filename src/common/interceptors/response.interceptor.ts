@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { isObject, mapKeys, snakeCase } from 'lodash';
 import { BaseResponse } from '../interface/base-response.interface';
+import * as moment from 'moment-timezone';
 
 @Injectable()
 export class ResponseTransformInterceptor implements NestInterceptor {
@@ -35,7 +36,7 @@ export class ResponseTransformInterceptor implements NestInterceptor {
     if (Array.isArray(data)) {
       return data.map((item) => this.transformKeysToSnakeCase(item));
     } else if (data instanceof Date) {
-      return data;
+      return moment(data).tz('Asia/Jakarta').format();
     } else if (isObject(data) && data !== null) {
       const snakeCased = mapKeys(data, (_: any, key: string) => snakeCase(key));
       for (const key in snakeCased) {

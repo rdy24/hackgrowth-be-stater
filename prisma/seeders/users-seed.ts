@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { Gender, PrismaClient } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -11,6 +11,13 @@ interface UserData {
   password: string;
   roleKey: string;
   firstName?: string;
+  bio?: string;
+  avatar?: string;
+  gender?: string;
+  expertise?: string;
+  experienceYears?: number;
+  linkedinUrl?: string;
+  githubUrl?: string;
 }
 
 interface UsersJsonData {
@@ -46,6 +53,30 @@ export async function usersSeed() {
         password: hashedPassword,
         roleId: role.id,
         isVerified: true,
+        userProfile: {
+          create: {
+            bio:
+              user.bio ||
+              `I am a ${user.roleKey} with expertise in various technologies.`,
+            avatar:
+              user.avatar ||
+              `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=random`,
+            gender: (user.gender as Gender) || ('MALE' as Gender),
+            expertise:
+              user.expertise ||
+              (user.roleKey === 'mentor'
+                ? 'Full Stack Development'
+                : 'Learning'),
+            experienceYears:
+              user.experienceYears || (user.roleKey === 'mentor' ? 5 : 0),
+            linkedinUrl:
+              user.linkedinUrl ||
+              `https://linkedin.com/in/${user.name.toLowerCase().replace(' ', '-')}`,
+            githubUrl:
+              user.githubUrl ||
+              `https://github.com/${user.name.toLowerCase().replace(' ', '-')}`,
+          },
+        },
       },
     });
 
